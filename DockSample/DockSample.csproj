@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40793A27-478B-4357-B4C3-FC8943131F3D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DockSample</RootNamespace>
+    <AssemblyName>维修管理系统</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Administrator\Application Data\ICSharpCode/SharpDevelop4\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Network Connection Manager.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.grdesLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Grid++Report 5.0\Samples\CSharp\2.Normal\bin\Debug\AxInterop.grdesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.grproLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Grid++Report 5.0\Samples\CSharp\2.Normal\bin\Debug\AxInterop.grproLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Design">
+      <HintPath>..\..\CS\DLL\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\..\CS\DLL\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Interop.Excel, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\新建文件夹\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="LibProgressForm">
+      <HintPath>..\..\CS\DLL\LibProgressForm.dll</HintPath>
+    </Reference>
+    <Reference Include="Loading">
+      <HintPath>..\..\CS\DLL\Loading.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.5.0.30718, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Zjs.Ftp">
+      <HintPath>..\..\CS\DLL\Zjs.Ftp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bluetom\ChineseCalendarInfo.cs" />
+    <Compile Include="bluetom\CustomPoint.cs" />
+    <Compile Include="bluetom\CustomRectangle.cs" />
+    <Compile Include="bluetom\Dexcel.cs" />
+    <Compile Include="bluetom\DrawData.cs" />
+    <Compile Include="bluetom\ImeHelper.cs" />
+    <Compile Include="bluetom\IniFiles.cs" />
+    <Compile Include="bluetom\Report.cs" />
+    <Compile Include="bluetom\SplitWord.cs" />
+    <Compile Include="Bulletin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bulletin.designer.cs">
+      <DependentUpon>Bulletin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DATA_upload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_upload.designer.cs">
+      <DependentUpon>DATA_upload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FJ_DOWN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FJ_DOWN.designer.cs">
+      <DependentUpon>FJ_DOWN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BJ.Designer.cs">
+      <DependentUpon>Form_BJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BJXG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BJXG.designer.cs">
+      <DependentUpon>Form_BJXG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BMLB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BMLB.Designer.cs">
+      <DependentUpon>Form_BMLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FPXG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FPXG.Designer.cs">
+      <DependentUpon>Form_FPXG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GSXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GSXX.Designer.cs">
+      <DependentUpon>Form_GSXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GZGL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GZGL.designer.cs">
+      <DependentUpon>Form_GZGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GZJB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GZJB.Designer.cs">
+      <DependentUpon>Form_GZJB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_JCBJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_JCBJ.Designer.cs">
+      <DependentUpon>Form_JCBJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_JCWX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_JCWX.designer.cs">
+      <DependentUpon>Form_JCWX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_JFGL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_JFGL.Designer.cs">
+      <DependentUpon>Form_JFGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_JFSH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_JFSH.Designer.cs">
+      <DependentUpon>Form_JFSH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_KHXG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_KHXG.Designer.cs">
+      <DependentUpon>Form_KHXG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_KHXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_KHXX.designer.cs">
+      <DependentUpon>Form_KHXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_KPZL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_KPZL.Designer.cs">
+      <DependentUpon>Form_KPZL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_KQGL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_KQGL.designer.cs">
+      <DependentUpon>Form_KQGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_LCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_LCT.Designer.cs">
+      <DependentUpon>Form_LCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_LJSH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_LJSH.designer.cs">
+      <DependentUpon>Form_LJSH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_LY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_LY.Designer.cs">
+      <DependentUpon>Form_LY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MMXG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MMXG.Designer.cs">
+      <DependentUpon>Form_MMXG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PG.designer.cs">
+      <DependentUpon>Form_PG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PJ.Designer.cs">
+      <DependentUpon>Form_PJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PJKC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PJKC.Designer.cs">
+      <DependentUpon>Form_PJKC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PJLB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PJLB.designer.cs">
+      <DependentUpon>Form_PJLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PJML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PJML.Designer.cs">
+      <DependentUpon>Form_PJML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PJRK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PJRK.Designer.cs">
+      <DependentUpon>Form_PJRK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PJSH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PJSH.Designer.cs">
+      <DependentUpon>Form_PJSH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QXGL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QXGL.Designer.cs">
+      <DependentUpon>Form_QXGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SCMM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SCMM.Designer.cs">
+      <DependentUpon>Form_SCMM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SHGB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SHGB.designer.cs">
+      <DependentUpon>Form_SHGB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SZLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SZLS.designer.cs">
+      <DependentUpon>Form_SZLS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SZSH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SZSH.designer.cs">
+      <DependentUpon>Form_SZSH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Text.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Text.Designer.cs">
+      <DependentUpon>Form_Text.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_WXBJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_WXBJ.Designer.cs">
+      <DependentUpon>Form_WXBJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_WXCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_WXCX.designer.cs">
+      <DependentUpon>Form_WXCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_WXDJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_WXDJ.Designer.cs">
+      <DependentUpon>Form_WXDJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_WXPG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_WXPG.designer.cs">
+      <DependentUpon>Form_WXPG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_WXZL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_WXZL.designer.cs">
+      <DependentUpon>Form_WXZL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_XJJD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_XJJD.designer.cs">
+      <DependentUpon>Form_XJJD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_XJSZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_XJSZ.Designer.cs">
+      <DependentUpon>Form_XJSZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_XPWG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_XPWG.Designer.cs">
+      <DependentUpon>Form_XPWG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_XPZJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_XPZJ.designer.cs">
+      <DependentUpon>Form_XPZJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_XXJF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_XXJF.Designer.cs">
+      <DependentUpon>Form_XXJF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_XXXG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_XXXG.Designer.cs">
+      <DependentUpon>Form_XXXG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_XXXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_XXXX.Designer.cs">
+      <DependentUpon>Form_XXXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_YGXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_YGXX.Designer.cs">
+      <DependentUpon>Form_YGXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_YSZK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_YSZK.designer.cs">
+      <DependentUpon>Form_YSZK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ZHGL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ZHGL.Designer.cs">
+      <DependentUpon>Form_ZHGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ZJXM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ZJXM.Designer.cs">
+      <DependentUpon>Form_ZJXM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ZJZC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ZJZC.Designer.cs">
+      <DependentUpon>Form_ZJZC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ZKXG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ZKXG.Designer.cs">
+      <DependentUpon>Form_ZKXG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_HaveBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_HaveBack.Designer.cs">
+      <DependentUpon>F_HaveBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridppReport.cs" />
+    <Compile Include="LoginXT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginXT.designer.cs">
+      <DependentUpon>LoginXT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="means.cs" />
+    <Compile Include="MyModule.cs" />
+    <Compile Include="ShowStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowStatus.Designer.cs">
+      <DependentUpon>ShowStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customization\DockHelper.cs" />
+    <Compile Include="Customization\Extender.cs" />
+    <Compile Include="Customization\InertButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customization\VS2003AutoHideStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customization\VS2003DockPaneCaption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customization\VS2003DockPaneStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginXT.resx">
+      <DependentUpon>LoginXT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Customization\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Customization\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ArrowDown.bmp" />
+    <None Include="Images\ArrowUp.bmp" />
+    <None Include="Images\Bitmap.ico" />
+    <None Include="Images\BlankIcon.ico" />
+    <None Include="Images\ClosedFolder.ICO" />
+    <None Include="Images\CSFile.ico" />
+    <None Include="Images\CSProject.ico" />
+    <None Include="Images\File.ico" />
+    <None Include="Images\Form.ico" />
+    <None Include="Images\Mouse.bmp" />
+    <None Include="Images\msenv22.ico" />
+    <None Include="Images\New.ico" />
+    <None Include="Images\Open.ico" />
+    <None Include="Images\OpenFolder.ICO" />
+    <None Include="Images\OutputWindow.ico" />
+    <None Include="Images\PropertyWindow.ico" />
+    <None Include="Images\Reference.ico" />
+    <None Include="Images\References.ico" />
+    <None Include="Images\SolutionExplorer.ico" />
+    <None Include="Images\TaskListWindow.ico" />
+    <None Include="Images\ToolboxWindow.ico" />
+    <None Include="Images\XmlFile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bulletin.resx">
+      <DependentUpon>Bulletin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customization\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DATA_upload.resx">
+      <DependentUpon>DATA_upload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignForm.resx">
+      <DependentUpon>DesignForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FJ_DOWN.resx">
+      <DependentUpon>FJ_DOWN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BJ.resx">
+      <DependentUpon>Form_BJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BJXG.resx">
+      <DependentUpon>Form_BJXG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BMLB.resx">
+      <DependentUpon>Form_BMLB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_FPXG.resx">
+      <DependentUpon>Form_FPXG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GSXX.resx">
+      <DependentUpon>Form_GSXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GZGL.resx">
+      <DependentUpon>Form_GZGL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GZJB.resx">
+      <DependentUpon>Form_GZJB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_JCBJ.resx">
+      <DependentUpon>Form_JCBJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_JCWX.resx">
+      <DependentUpon>Form_JCWX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_JFGL.resx">
+      <DependentUpon>Form_JFGL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_JFSH.resx">
+      <DependentUpon>Form_JFSH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_KHXG.resx">
+      <DependentUpon>Form_KHXG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_KHXX.resx">
+      <DependentUpon>Form_KHXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_KPZL.resx">
+      <DependentUpon>Form_KPZL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_KQGL.resx">
+      <DependentUpon>Form_KQGL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_LCT.resx">
+      <DependentUpon>Form_LCT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_LJSH.resx">
+      <DependentUpon>Form_LJSH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_LY.resx">
+      <DependentUpon>Form_LY.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MMXG.resx">
+      <DependentUpon>Form_MMXG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PG.resx">
+      <DependentUpon>Form_PG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PJ.resx">
+      <DependentUpon>Form_PJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PJKC.resx">
+      <DependentUpon>Form_PJKC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PJLB.resx">
+      <DependentUpon>Form_PJLB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PJML.resx">
+      <DependentUpon>Form_PJML.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PJRK.resx">
+      <DependentUpon>Form_PJRK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PJSH.resx">
+      <DependentUpon>Form_PJSH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QXGL.resx">
+      <DependentUpon>Form_QXGL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SCMM.resx">
+      <DependentUpon>Form_SCMM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SHGB.resx">
+      <DependentUpon>Form_SHGB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SZLS.resx">
+      <DependentUpon>Form_SZLS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SZSH.resx">
+      <DependentUpon>Form_SZSH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Text.resx">
+      <DependentUpon>Form_Text.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_WXBJ.resx">
+      <DependentUpon>Form_WXBJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_WXCX.resx">
+      <DependentUpon>Form_WXCX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_WXDJ.resx">
+      <DependentUpon>Form_WXDJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_WXPG.resx">
+      <DependentUpon>Form_WXPG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_WXZL.resx">
+      <DependentUpon>Form_WXZL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_XJJD.resx">
+      <DependentUpon>Form_XJJD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_XJSZ.resx">
+      <DependentUpon>Form_XJSZ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_XPWG.resx">
+      <DependentUpon>Form_XPWG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_XPZJ.resx">
+      <DependentUpon>Form_XPZJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_XXJF.resx">
+      <DependentUpon>Form_XXJF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_XXXG.resx">
+      <DependentUpon>Form_XXXG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_XXXX.resx">
+      <DependentUpon>Form_XXXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_YGXX.resx">
+      <DependentUpon>Form_YGXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_YSZK.resx">
+      <DependentUpon>Form_YSZK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ZHGL.resx">
+      <DependentUpon>Form_ZHGL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ZJXM.resx">
+      <DependentUpon>Form_ZJXM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ZJZC.resx">
+      <DependentUpon>Form_ZJZC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ZKXG.resx">
+      <DependentUpon>Form_ZKXG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_HaveBack.resx">
+      <DependentUpon>F_HaveBack.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DockPanel.xml" />
+    <EmbeddedResource Include="Customization\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PaneDiamond.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneStrip_ScrollRightEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PaneDiamond_Bottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\Dockindicator_PaneDiamond_Fill.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PaneDiamond_Hotspot.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PaneDiamond_HotspotIndex.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PaneDiamond_Left.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PaneDiamond_Right.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PaneDiamond_Top.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelBottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelBottom_Active.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelFill.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelFill_Active.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelLeft_Active.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelRight_Active.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelTop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockIndicator_PanelTop_Active.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneCaption_AutoHideNo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneCaption_AutoHideYes.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneCaption_CloseDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneCaption_CloseEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneStrip_CloseDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneStrip_CloseEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneStrip_ScrollLeftDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneStrip_ScrollLeftEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Customization\Resources\DockPaneStrip_ScrollRightDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Network Connection Manager.ico" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\kuser.png" />
+    <None Include="Resources\login.jpg" />
+    <None Include="Resources\JWZB.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="grdesLib">
+      <Guid>{0CDAC26E-8F92-47EE-9E2E-844DBF78703A}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="grproLib">
+      <Guid>{715CBE0F-4F50-46EF-B009-CACED3A5C868}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

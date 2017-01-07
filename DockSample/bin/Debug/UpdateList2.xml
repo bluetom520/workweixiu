@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312"?>
+<AutoUpdater>
+  <description>Application autoUpdate</description>
+  <Updater>
+	<Url>http://26.2.4.189/JWZB/</Url>
+	<LastUpdateTime>2005-09-05</LastUpdateTime>
+  </Updater>
+  <Application applicationId="ItemSoft">
+    <EntryPoint>机务值班.exe</EntryPoint>
+    <Location>.</Location>
+	<Version>1.0.0.0</Version>
+  </Application>
+  <Files>
+	   <File Ver="1.0.0.019" Name="机务值班.exe" />
+	   <File Ver="1.0.0.001" Name="LBIndustrialCtrls.dll" />
+
+  </Files>
+</AutoUpdater>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="gb2312"?>
+<AutoUpdater>
+  <description>Application autoUpdate</description>
+  <Updater>
+	<Url>http://192.168.0.101/test/</Url>
+	<LastUpdateTime>2005-09-05</LastUpdateTime>
+  </Updater>
+  <Application applicationId="ItemSoft">
+    <EntryPoint>机务管理系统.exe</EntryPoint>
+    <Location>.</Location>
+	<Version>1.0.0.0</Version>
+  </Application>
+  <Files>
+	   <File Ver="1.0.0.021" Name="机务管理系统.exe" />
+	   <File Ver="1.0.0.002" Name="AxInterop.grdesLib.dll" />
+	   <File Ver="1.0.0.002" Name="AxInterop.grproLib.dll" />
+	   <File Ver="1.0.0.002" Name="Interop.grdesLib.dll" />
+	   <File Ver="1.0.0.002" Name="Interop.grproLib.dll" />
+	   <File Ver="1.0.0.002" Name="Interop.Microsoft.Office.Interop.Excel.dll" />
+	   <File Ver="1.0.0.002" Name="grdes50.dll" />
+	   <File Ver="1.0.0.002" Name="gregn50.dll" />
+	   <File Ver="1.0.0.001" Name="报价单.grf" />
+	   <File Ver="1.0.0.001" Name="工资报表.grf" />
+	   <File Ver="1.0.0.002" Name="注册控件.bat" />
+	   <File Ver="1.0.0.002" Name="config.ini" />
+  </Files>
+</AutoUpdater>
